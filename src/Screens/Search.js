@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { AntDesign, Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { StyleSheet, Text, View, ScrollView, TextInput } from "react-native";
+import MiniCard from "../Components/MiniCard";
 export default function Home() {
   const [value, setValue] = useState("");
   return (
@@ -11,6 +12,8 @@ export default function Home() {
           flexDirection: "row",
           justifyContent: "space-around",
           alignItems: "center",
+          backgroundColor: "red",
+          paddingVertical: 5,
           elevation: 5,
         }}
       >
@@ -27,6 +30,22 @@ export default function Home() {
         />
         <MaterialIcons name="send" size={24} color="black" />
       </View>
+      <ScrollView>
+        <MiniCard />
+        <MiniCard />
+        <MiniCard />
+        <MiniCard />
+        <MiniCard />
+        <MiniCard />
+        <MiniCard />
+        <MiniCard />
+        <MiniCard />
+        <MiniCard />
+        <MiniCard />
+        <MiniCard />
+        <MiniCard />
+        <MiniCard />
+      </ScrollView>
     </View>
   );
 }
