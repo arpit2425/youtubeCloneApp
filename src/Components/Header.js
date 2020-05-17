@@ -1,13 +1,13 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Entypo, Ionicons, MaterialIcons } from "@expo/vector-icons";
-import Constant from "expo-constants";
+
 export default function Header() {
   return (
     <View
       style={{
         height: 50,
-        marginTop: Constant.statusBarHeight,
+
         backgroundColor: "#fff",
         flexDirection: "row",
         justifyContent: "space-between",
