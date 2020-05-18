@@ -37,7 +37,7 @@ const RootHome = () => {
       }}
     >
       <Tabs.Screen name="Home" component={Home} />
-      <Tabs.Screen name="Explore" component={Explore} />
+      <Tabs.Screen name="Search" component={Search} />
       <Tabs.Screen name="Subscribe" component={Subscribe} />
     </Tabs.Navigator>
   );

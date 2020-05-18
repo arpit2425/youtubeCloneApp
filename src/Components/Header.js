@@ -1,8 +1,9 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Entypo, Ionicons, MaterialIcons } from "@expo/vector-icons";
-
+import { useNavigation } from "@react-navigation/native";
 export default function Header() {
+  const navigation = useNavigation();
   return (
     <View
       style={{
@@ -32,7 +33,12 @@ export default function Header() {
         }}
       >
         <Ionicons color="#212121" name="md-videocam" size={28} />
-        <Ionicons color="#212121" name="md-search" size={28} />
+        <Ionicons
+          color="#212121"
+          name="md-search"
+          size={28}
+          onPress={() => navigation.navigate("Search")}
+        />
         <MaterialIcons color="#212121" name="account-circle" size={28} />
       </View>
     </View>

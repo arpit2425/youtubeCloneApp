@@ -13,7 +13,7 @@ import {
 import MiniCard from "../Components/MiniCard";
 
 //www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=songs&type=video&key=AIzaSyAtVkfVRiNbd4RzvSm7-_19uAnjznxpi3g
-export default function Home() {
+export default function Home({ navigation }) {
   const [value, setValue] = useState("");
   const [loading, setLoading] = useState(false);
   const [miniCards, setMiniCards] = useState([]);
@@ -48,7 +48,12 @@ export default function Home() {
           elevation: 5,
         }}
       >
-        <AntDesign name="arrowleft" size={24} color="black" />
+        <AntDesign
+          name="arrowleft"
+          size={24}
+          color="black"
+          onPress={() => navigation.goBack()}
+        />
         <TextInput
           style={{
             width: "70%",
