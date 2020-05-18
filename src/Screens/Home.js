@@ -8,14 +8,14 @@ import Card from "../Components/Card";
 export default function Home() {
   return (
     <View style={{ flex: 1, marginTop: Constant.statusBarHeight }}>
-      {/* <Header />
+      <Header />
       <ScrollView>
         <Card />
         <Card />
         <Card />
         <Card />
-      </ScrollView> */}
-      <Search />
+      </ScrollView>
+      {/* <Search /> */}
     </View>
   );
 }
