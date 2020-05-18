@@ -21,7 +21,7 @@ const RootHome = () => {
 
           if (route.name === "Home") {
             iconName = "home";
-          } else if (route.name === "Explore") {
+          } else if (route.name === "Search") {
             iconName = "explore";
           } else if (route.name === "Subscribe") {
             iconName = "subscriptions";

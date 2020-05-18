@@ -46,6 +46,7 @@ export default function Home({ navigation }) {
           backgroundColor: "red",
           paddingVertical: 5,
           elevation: 5,
+          height: 50,
         }}
       >
         <AntDesign
@@ -57,6 +58,7 @@ export default function Home({ navigation }) {
         <TextInput
           style={{
             width: "70%",
+            height: 35,
             borderWidth: 0.5,
             padding: 2,
             backgroundColor: "#e6e6e6",
