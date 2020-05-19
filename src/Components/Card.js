@@ -1,14 +1,13 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 import { Entypo, Ionicons, MaterialIcons } from "@expo/vector-icons";
-const Card = () => {
+const Card = ({ id, title, channel, imgurl, channelid }) => {
   return (
     <View>
       <View>
         <Image
           source={{
-            uri:
-              "https://images.unsplash.com/photo-1534157327728-accacabda257?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+            uri: imgurl,
           }}
           style={{ width: "100%", height: 200 }}
         />
@@ -30,13 +29,11 @@ const Card = () => {
           <Text
             ellipsizeMode="tail"
             numberOfLines={2}
-            style={{ fontSize: 18, width: 200 }}
+            style={{ fontSize: 18, width: 300 }}
           >
-            Title of the video
+            {title}
           </Text>
-          <Text style={{ fontSize: 12, color: "#777" }}>
-            user-458k views-2 hours ago
-          </Text>
+          <Text style={{ fontSize: 12, color: "#777" }}>{channel}</Text>
         </View>
         <Entypo
           name="dots-three-vertical"

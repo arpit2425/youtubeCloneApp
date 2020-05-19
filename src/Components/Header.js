@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Entypo, Ionicons, MaterialIcons } from "@expo/vector-icons";
+import Constant from "expo-constants";
 import { useNavigation } from "@react-navigation/native";
 export default function Header() {
   const navigation = useNavigation();
@@ -8,6 +9,7 @@ export default function Header() {
     <View
       style={{
         height: 50,
+        marginTop: Constant.statusBarHeight,
 
         backgroundColor: "#fff",
         flexDirection: "row",

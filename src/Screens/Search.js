@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Constant from "expo-constants";
 import { AntDesign, Ionicons, MaterialIcons } from "@expo/vector-icons";
 import {
   StyleSheet,
@@ -23,7 +23,7 @@ export default function Home({ navigation }) {
     return state;
   });
   const renderCards = () => {
-    setMiniCards([]);
+    // setMiniCards([]);
     setLoading(true);
     fetch(
       `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${value}&regionCode=IN&type=video&key=AIzaSyAtVkfVRiNbd4RzvSm7-_19uAnjznxpi3g`
@@ -50,6 +50,7 @@ export default function Home({ navigation }) {
           justifyContent: "space-around",
           alignItems: "center",
           backgroundColor: "red",
+          marginTop: Constant.statusBarHeight,
           paddingVertical: 5,
           elevation: 5,
           height: 50,
