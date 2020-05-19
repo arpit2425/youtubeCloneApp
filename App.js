@@ -25,7 +25,7 @@ const RootHome = () => {
 
           if (route.name === "Home") {
             iconName = "home";
-          } else if (route.name === "Search") {
+          } else if (route.name === "Explore") {
             iconName = "explore";
           } else if (route.name === "Subscribe") {
             iconName = "subscriptions";
@@ -41,7 +41,7 @@ const RootHome = () => {
       }}
     >
       <Tabs.Screen name="Home" component={Home} />
-      <Tabs.Screen name="Search" component={Search} />
+      <Tabs.Screen name="Explore" component={Explore} />
       <Tabs.Screen name="Subscribe" component={Subscribe} />
     </Tabs.Navigator>
   );
