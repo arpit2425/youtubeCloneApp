@@ -11,12 +11,17 @@ import {
   FlatList,
 } from "react-native";
 import MiniCard from "../Components/MiniCard";
+import { useSelector, useDispatch } from "react-redux";
 
 //www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=songs&type=video&key=AIzaSyAtVkfVRiNbd4RzvSm7-_19uAnjznxpi3g
 export default function Home({ navigation }) {
   const [value, setValue] = useState("");
   const [loading, setLoading] = useState(false);
-  const [miniCards, setMiniCards] = useState([]);
+  // const [miniCards, setMiniCards] = useState([]);
+  const dispatch = useDispatch();
+  const miniCards = useSelector((state) => {
+    return state;
+  });
   const renderCards = () => {
     setMiniCards([]);
     setLoading(true);
@@ -33,7 +38,8 @@ export default function Home({ navigation }) {
       .then((res) => res.json())
       .then((data) => {
         setLoading(false);
-        setMiniCards(data.items);
+        dispatch({ type: "add", payload: data.items });
+        // setMiniCards(data.items);
       });
   };
   return (
